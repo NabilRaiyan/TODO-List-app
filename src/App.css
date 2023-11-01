@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe&family=Geologica&family=Raleway:wght@200&display=swap');
+
+:root{
+  --appBgColor: #1B1D26;
+  --fontColor: #5EBFF9;
+  --buttonBgColor: #5A8BD8;
+  --fontMain:'Geologica',Helvetica, sans-serif;
+}
+
+body{
+  margin: 40px 50px;
+}
+
+.App-header{
+  background-color: var(--appBgColor);
+  min-height: 100vh;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  padding: 40px;
+  border-radius: 12px;
+}
+
+h4{
+  font-weight: 800;
+  color: var(--fontColor);
+  margin-bottom: 5px;
+
+}
+
+.clock{
+  animation: mymove 5s infinite;
+  position: absolute;
+  margin-left: 10px;
+}
+
+@keyframes mymove {
+  0% {transform: rotate(0deg);}
+  30% {transform: rotate(90deg);}
+  60% {transform: rotate(270deg);}
+  100% {transform: rotate(360deg);}
+}
+
+span{
+  color: var(--buttonBgColor);
+}
+
+.navbar{
+  text-align: left;
+  font-family: 'Geologica', sans-serif;
+}
+
+
+.upperSection{
+  margin: 0 auto;
+  border-radius: 12px;
+  border: 1px solid;
+  border-color: var(--fontColor);
+  height: auto;
+  width: 400px;
+}
+
+.textDiv{
+  margin: 20px;
+  display: inline-block;
+}
+h5, h3, h1{
+  margin: 0;
+}
+h5{
+  margin-left: 6px;
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 4px;
+}
+
+h5, h3{
+  color: var(--fontColor);
+}
+h1{
+  color: black;
+  font-family: 'Geologica',Helvetica, sans-serif;
+}
+
+.todoTrack{
+  display: inline-block;
+  margin: 40px 10px 40px 60px;
+  background-color: var(--buttonBgColor);
+  padding: 30px;
+  border-radius: 50%;
+}
+
+/* middle section */
+
+.middleSection{
+  text-align: center;
+}
+.todoInput{
+  position: relative;
+  right: 10px;
+  margin: 30px 5px 30px 30px;
+  height: 50px;
+  width: 350px;
+  padding-left: 20px;
+  border-radius: 8px;
+  border: 1px solid;
+  background-color: #1F1E1E;
+  border-color: var(--fontColor);
+  box-sizing: border-box;
+  color: white;
+  font-family: 'Geologica',Helvetica, sans-serif;
+}
+
+.todoInput::placeholder{
+  color: #787168;
+  font-family: 'Geologica',Helvetica, sans-serif;
+  font-size: 1rem;
+  letter-spacing: 2px;
+}
+
+
+
+.addTodoBtn{
+  background-color: var(--buttonBgColor);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  margin: 20px 0 0 0;
+  border: none;
+  text-align: center;
+  font: 32px Arial, sans-serif;
+  position: relative;
+  top: 5px;
+}
+
+/* styling todos */
+
+.todoDiv{
+  margin: 30px auto;
+  width: 390px;
+  padding: 9px 9px 9px 0;
+  border-radius: 8px;
+  border: 1px solid;
+  background-color: var(--appBgColor);
+  border-color: var(--fontColor);
+  color: var(--fontColor);
+  font-family: var(--fontMain);
+  text-align: left;
+  font-size: 1.3rem;
+}
+
+.todoTitle{
+  margin-left: 10px;
+}
+
+.todoTitle, .editBtn, .deleteBtn{
+  display: inline-block;
+  margin: 10px;
+}
+
+.editBtn, .deleteBtn{
+  position: relative;
+  left: 150px;
+}
+
+.lowerSection{
+  font-family: 'Geologica',Helvetica, sans-serif;
+  margin: 20px auto;
+  text-align: center;
+}
