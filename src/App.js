@@ -11,10 +11,11 @@ import { faPenToSquare, faTrash, faClock } from '@fortawesome/free-solid-svg-ico
 
     super();
     this.state = {
-      todos : [],
+      todos : [
+        {key: 1, value: "Do nothing"},
+      ],
       newTodoTask: '',
       id: 0
-
     }; 
   }
 
@@ -22,7 +23,6 @@ import { faPenToSquare, faTrash, faClock } from '@fortawesome/free-solid-svg-ico
     this.state.newTodoTask = event.target.value;
   }
   onAddButtonClick = (event)=>{
-    
     console.log(this.state.todos)
     this.state.todos.push({
       key: this.state.id += 1,
@@ -54,10 +54,11 @@ import { faPenToSquare, faTrash, faClock } from '@fortawesome/free-solid-svg-ico
           <input name='todoInput' className='todoInput' type='text' placeholder='write your next task' onChange={this.onTodoInputChange}></input>
           <button className='addTodoBtn' type='submit' onClick={this.onAddButtonClick}>+</button>
           {
-            todos.map((todo)=>{ 
-            var index = todos.findIndex(id => id === todo.todo);
+            todos.map(function(todo){ 
+            var index = todos.findIndex(id => id === todo.key)
+            console.log(todo.value);
             return (<div className='todoDiv'>
-              <h3 className='todoTitle' key={index}>{todo.todo}</h3>
+              <h3 className='todoTitle' key={index}>{todo.value}</h3>
               <h5 className='editBtn'><FontAwesomeIcon icon={faPenToSquare} /></h5>
               <h5 className='deleteBtn'><FontAwesomeIcon icon={faTrash} /></h5>
             </div>
