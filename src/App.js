@@ -6,29 +6,33 @@ import { faPenToSquare, faTrash, faClock } from '@fortawesome/free-solid-svg-ico
 
 
  class App extends Component {
+  
   constructor(){
+
     super();
     this.state = {
       todos : [],
       newTodoTask: '',
+      id: 0
 
     }; 
   }
 
-  
-
   onTodoInputChange = (event)=>{
     this.state.newTodoTask = event.target.value;
   }
-
   onAddButtonClick = (event)=>{
     
     console.log(this.state.todos)
-    let newTodoList = this.state.todos.push(this.state.newTodoTask);
+    this.state.todos.push({
+      key: this.state.id += 1,
+      value: this.state.newTodoTask,
+    });
   }
 
+
   render(){
-    const { todos, newTodoTask } = this.state;
+    const { todos } = this.state;
   return (
     <div className="App">
       <header className="App-header">
