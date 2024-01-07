@@ -8,11 +8,11 @@ import { faPenToSquare, faTrash, faClock } from '@fortawesome/free-solid-svg-ico
  class App extends Component {
   
   constructor(){
-
     super();
     this.state = {
       todos : [
         {key: 1, value: "Do nothing"},
+        {key: 2, value: "Do something"},
       ],
       newTodoTask: '',
       id: 0
@@ -55,10 +55,10 @@ import { faPenToSquare, faTrash, faClock } from '@fortawesome/free-solid-svg-ico
           <button className='addTodoBtn' type='submit' onClick={this.onAddButtonClick}>+</button>
           {
             todos.map(function(todo){ 
-            var index = todos.findIndex(id => id === todo.key)
+            //var index = todos.findIndex(idTodo => idTodo === todo.key)
             console.log(todo.value);
             return (<div className='todoDiv'>
-              <h3 className='todoTitle' key={index}>{todo.value}</h3>
+              <h3 className='todoTitle' key={todos.key}>{todo.value}</h3>
               <h5 className='editBtn'><FontAwesomeIcon icon={faPenToSquare} /></h5>
               <h5 className='deleteBtn'><FontAwesomeIcon icon={faTrash} /></h5>
             </div>
