@@ -1,12 +1,11 @@
 import './App.css';
-import { Component } from 'react';
+import { Component, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPenToSquare, faTrash, faClock } from '@fortawesome/free-solid-svg-icons'
 
 
 
  class App extends Component {
-
   constructor(){
     super();
     this.state = {
@@ -27,9 +26,14 @@ import { faPenToSquare, faTrash, faClock } from '@fortawesome/free-solid-svg-ico
           todo: "Do Shopping",
         },
       ],
+      newTodoTask: '',
 
     };
+
+    
   }
+
+  
   render(){
   return (
     <div className="App">
@@ -47,11 +51,19 @@ import { faPenToSquare, faTrash, faClock } from '@fortawesome/free-solid-svg-ico
             <h1>1/{this.state.todos.length}</h1>
           </div>
        </div>
-
       {/* Middle section  to add todos and show todos*/}
        <div className='middleSection'>
-          <input name='todoInput' className='todoInput' type='text' placeholder='write your next task'></input>
-          <button className='addTodoBtn' type='submit'>+</button>
+
+          <input name='todoInput' className='todoInput' type='text' placeholder='write your next task' onChange={(event)=>{
+            this.state.newTodoTask = event.target.value;
+          }}></input>
+          <button className='addTodoBtn' type='submit' onClick={(event)=>{
+            console.log("New todo: " + this.state.newTodoTask);
+            this.state.todos.push(this.state.newTodoTask);
+            console.log(this.state.todos);
+          }}>+</button>
+
+          
           {
             this.state.todos.map((todo)=>{ 
             return (<div className='todoDiv'>
