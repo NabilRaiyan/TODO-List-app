@@ -23,12 +23,10 @@ import TodoCard from './components/todo-card';
     this.state.newTodoTask = event.target.value;
   }
   onAddButtonClick = (event)=>{
-    //console.log(this.state.todos)
     const newTodo = this.state.todos.push({
       key: this.state.id += 1,
       value: this.state.newTodoTask,
     });
-
     this.setState(()=>{
       return {newTodo};
     });
