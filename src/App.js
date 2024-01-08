@@ -1,8 +1,8 @@
 import './App.css';
 import { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPenToSquare, faTrash, faClock } from '@fortawesome/free-solid-svg-icons'
-
+import { faClock } from '@fortawesome/free-solid-svg-icons'
+import TodoCard from './components/todo-card';
 
 
  class App extends Component {
@@ -35,6 +35,7 @@ import { faPenToSquare, faTrash, faClock } from '@fortawesome/free-solid-svg-ico
     const { todos } = this.state;
   return (
     <div className="App">
+      
       <header className="App-header">
        <div className='navbar'>
          <h4>XERO<span>TODO</span><span className='clock'><FontAwesomeIcon icon={faClock} /></span></h4>
@@ -53,17 +54,7 @@ import { faPenToSquare, faTrash, faClock } from '@fortawesome/free-solid-svg-ico
        <div className='middleSection'>
           <input name='todoInput' className='todoInput' type='text' placeholder='write your next task' onChange={this.onTodoInputChange}></input>
           <button className='addTodoBtn' type='submit' onClick={this.onAddButtonClick}>+</button>
-          {
-            todos.map(function(todo){ 
-            //var index = todos.findIndex(idTodo => idTodo === todo.key)
-            console.log(todo.value);
-            return (<div className='todoDiv'>
-              <h3 className='todoTitle' key={todos.key}>{todo.value}</h3>
-              <h5 className='editBtn'><FontAwesomeIcon icon={faPenToSquare} /></h5>
-              <h5 className='deleteBtn'><FontAwesomeIcon icon={faTrash} /></h5>
-            </div>
-            )})
-          }
+          <TodoCard  todos={todos}/>
        </div>
       </header>
       <footer className='lowerSection'>Copyright © {new Date().getFullYear()} Raiyan Al Sultan </footer>
