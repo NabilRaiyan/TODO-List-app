@@ -19,6 +19,9 @@ import TodoCard from './components/todo-card';
     }; 
   }
 
+
+  
+
   
 
   onTodoInputChange = (event)=>{
@@ -58,7 +61,7 @@ import TodoCard from './components/todo-card';
        <div className='middleSection'>
           <input name='todoInput' className='todoInput' type='text' placeholder='write your next task' onChange={this.onTodoInputChange}></input>
           <button className='addTodoBtn' type='submit' onClick={this.onAddButtonClick}>+</button>
-          <TodoCard className = 'todoDiv' todos={todos}/>
+          <TodoCard className = 'todoDiv' todos={todos} />
        </div>
       </header>
       <footer className='lowerSection'>Copyright © {new Date().getFullYear()} Raiyan Al Sultan </footer>

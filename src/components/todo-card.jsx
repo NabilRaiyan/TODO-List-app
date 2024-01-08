@@ -7,9 +7,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 class TodoCard extends Component{
 
     // function for deleting todos
-    deleteTodo = (event)=>{
-        console.log("Delete todo");
-    }
+  deleteTodo = (todos)=>{
+    console.log("deleted");
+  }
 
     render(){
         const {deleteTodo} = this;
