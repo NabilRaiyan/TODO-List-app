@@ -5,8 +5,8 @@ import { faClock } from '@fortawesome/free-solid-svg-icons'
 import TodoCard from './components/todo-card';
 
 
+// class component
  class App extends Component {
-  
   constructor(){
     super();
     this.state = {
