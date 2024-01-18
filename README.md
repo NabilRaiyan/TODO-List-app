@@ -13,7 +13,7 @@ TODO list app is a React.js project that can add, detele, update todos.
 ### Installation
   1. Clone the repository 
   ``` bash
-  git clone: https://github.com/NabilRaiyan/Monster-rolodex.git
+  git clone: https://github.com/NabilRaiyan/TODO-List-app.git
 ```
   3. Navigate to the project directory
   4. Install dependencies
