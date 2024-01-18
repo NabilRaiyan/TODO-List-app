@@ -1,11 +1,9 @@
 # Monster Rolodex
 ## Overview
-Monster Rolodex is a React.js project that showcases a collection of monsters fetched from an API. Users can scroll through the rolodex to view different types of monsters, each displaying their name and image. The project also features a search functionality, allowing users to filter monsters by name. 
+TODO list app is a React.js project that can add, detele, update todos. 
 
 ## Features
-- Dynamic Monster Display: Render a collection of monsters dynamically from an external API. 
-- Search Functionality: Easily search for monsters by their names using the search bar.
-- Responsive Design: Enjoy a user-friendly interface that adapts to different screen sizes.
+- Dynamic todo Display: Render a collection of todo dynamically. 
 
 ## Getting Started
 ### Prerequisites
@@ -23,5 +21,5 @@ Monster Rolodex is a React.js project that showcases a collection of monsters fe
      - Start the development server
      - npm start
      
-  5. Open your browser and go to http://localhost:3000 to view the Monster Rolodex.
+  5. Open your browser and go to http://localhost:3000 to view the TODO List App.
 
