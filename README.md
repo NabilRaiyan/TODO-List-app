@@ -1,4 +1,4 @@
-# Monster Rolodex
+# TODO List APP
 ## Overview
 TODO list app is a React.js project that can add, delete, and update todos. 
 
