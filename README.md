@@ -22,4 +22,3 @@ TODO list app is a React.js project that can add, detele, update todos.
      - npm start
      
   5. Open your browser and go to http://localhost:3000 to view the TODO List App.
-
