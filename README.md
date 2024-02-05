@@ -1,6 +1,6 @@
 # Monster Rolodex
 ## Overview
-TODO list app is a React.js project that can add, delete, update todos. 
+TODO list app is a React.js project that can add, delete, and update todos. 
 
 ## Features
 - Dynamic todo Display: Render a collection of todo dynamically. 
