@@ -10,6 +10,7 @@ TODO list app is a React.js project that can add and delete todos.
  1. Node.js
  2. npm (Node Package Manager)
 
+
 ### Installation
   1. Clone the repository 
   ``` bash
